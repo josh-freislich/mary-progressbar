@@ -27,6 +27,7 @@ function ProgressBarList({
     },
     []
   );
+  const stepValues = [-25, -10, 10, 25];
 
   return (
     <>
@@ -44,22 +45,13 @@ function ProgressBarList({
             <option value={index}> {ps.name} </option>
           ))}
         </select>
-        <StyledButton
-          onClick={changeProgressBarValue(selectedProgressBar, -25)}
-        >
-          -25
-        </StyledButton>
-        <StyledButton
-          onClick={changeProgressBarValue(selectedProgressBar, -10)}
-        >
-          -10
-        </StyledButton>
-        <StyledButton onClick={changeProgressBarValue(selectedProgressBar, 10)}>
-          +10
-        </StyledButton>
-        <StyledButton onClick={changeProgressBarValue(selectedProgressBar, 25)}>
-          +25
-        </StyledButton>
+        {stepValues.map((stepValue) => (
+          <StyledButton
+            onClick={changeProgressBarValue(selectedProgressBar, stepValue)}
+          >
+            {stepValue}
+          </StyledButton>
+        ))}
       </div>
     </>
   );
