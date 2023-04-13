@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project developed by React.js and Typescript for displaying different progress bars with adjustable values.
 
 ## Available Scripts
 
